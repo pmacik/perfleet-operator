@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: podfleet-operator
+subjects:
+- kind: ServiceAccount
+  name: podfleet-operator
+roleRef:
+  kind: Role
+  name: podfleet-operator
+  apiGroup: rbac.authorization.k8s.io
