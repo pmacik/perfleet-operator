@@ -1,0 +1,10 @@
+apiVersion: podfleetoperator.pmacik/v1alpha1
+kind: PodFleet
+metadata:
+  name: pf
+  labels:
+    app: pf
+    version: v0.0.1
+spec:
+  # Add fields here
+  workers: 10
