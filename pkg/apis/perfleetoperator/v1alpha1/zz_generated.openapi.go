@@ -13,17 +13,17 @@ import (
 
 func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenAPIDefinition {
 	return map[string]common.OpenAPIDefinition{
-		"github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleet":       schema_pkg_apis_podfleetoperator_v1alpha1_PodFleet(ref),
-		"github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleetSpec":   schema_pkg_apis_podfleetoperator_v1alpha1_PodFleetSpec(ref),
-		"github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleetStatus": schema_pkg_apis_podfleetoperator_v1alpha1_PodFleetStatus(ref),
+		"github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleet":       schema_pkg_apis_perfleetoperator_v1alpha1_PerFleet(ref),
+		"github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleetSpec":   schema_pkg_apis_perfleetoperator_v1alpha1_PerFleetSpec(ref),
+		"github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleetStatus": schema_pkg_apis_perfleetoperator_v1alpha1_PerFleetStatus(ref),
 	}
 }
 
-func schema_pkg_apis_podfleetoperator_v1alpha1_PodFleet(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_perfleetoperator_v1alpha1_PerFleet(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "PodFleet is the Schema for the podfleets API",
+				Description: "PerFleet is the Schema for the perfleets API",
 				Properties: map[string]spec.Schema{
 					"kind": {
 						SchemaProps: spec.SchemaProps{
@@ -46,27 +46,27 @@ func schema_pkg_apis_podfleetoperator_v1alpha1_PodFleet(ref common.ReferenceCall
 					},
 					"spec": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleetSpec"),
+							Ref: ref("github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleetSpec"),
 						},
 					},
 					"status": {
 						SchemaProps: spec.SchemaProps{
-							Ref: ref("github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleetStatus"),
+							Ref: ref("github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleetStatus"),
 						},
 					},
 				},
 			},
 		},
 		Dependencies: []string{
-			"github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleetSpec", "github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1.PodFleetStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
+			"github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleetSpec", "github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1.PerFleetStatus", "k8s.io/apimachinery/pkg/apis/meta/v1.ObjectMeta"},
 	}
 }
 
-func schema_pkg_apis_podfleetoperator_v1alpha1_PodFleetSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_perfleetoperator_v1alpha1_PerFleetSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "PodFleetSpec defines the desired state of PodFleet",
+				Description: "PerFleetSpec defines the desired state of PerFleet",
 				Properties:  map[string]spec.Schema{},
 			},
 		},
@@ -74,11 +74,11 @@ func schema_pkg_apis_podfleetoperator_v1alpha1_PodFleetSpec(ref common.Reference
 	}
 }
 
-func schema_pkg_apis_podfleetoperator_v1alpha1_PodFleetStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
+func schema_pkg_apis_perfleetoperator_v1alpha1_PerFleetStatus(ref common.ReferenceCallback) common.OpenAPIDefinition {
 	return common.OpenAPIDefinition{
 		Schema: spec.Schema{
 			SchemaProps: spec.SchemaProps{
-				Description: "PodFleetStatus defines the observed state of PodFleet",
+				Description: "PerFleetStatus defines the observed state of PerFleet",
 				Properties:  map[string]spec.Schema{},
 			},
 		},

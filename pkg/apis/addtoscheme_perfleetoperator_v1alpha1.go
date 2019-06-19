@@ -1,7 +1,7 @@
 package apis
 
 import (
-	"github.com/pmacik/podfleet-operator/pkg/apis/podfleetoperator/v1alpha1"
+	"github.com/pmacik/perfleet-operator/pkg/apis/perfleetoperator/v1alpha1"
 )
 
 func init() {

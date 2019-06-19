@@ -1,4 +1,4 @@
-module github.com/pmacik/podfleet-operator
+module github.com/pmacik/perfleet-operator
 
 require (
 	contrib.go.opencensus.io/exporter/ocagent v0.4.9 // indirect

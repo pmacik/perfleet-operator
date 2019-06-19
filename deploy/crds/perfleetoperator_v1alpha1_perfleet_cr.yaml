@@ -1,5 +1,5 @@
-apiVersion: podfleetoperator.pmacik/v1alpha1
-kind: PodFleet
+apiVersion: perfleetoperator.pmacik/v1alpha1
+kind: PerFleet
 metadata:
   name: pf
   labels:

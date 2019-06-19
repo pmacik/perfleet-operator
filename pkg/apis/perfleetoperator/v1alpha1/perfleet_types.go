@@ -7,18 +7,18 @@ import (
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
-// PodFleetSpec defines the desired state of PodFleet
+// PerFleetSpec defines the desired state of PerFleet
 // +k8s:openapi-gen=true
-type PodFleetSpec struct {
+type PerFleetSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book.kubebuilder.io/beyond_basics/generating_crd.html
 	Workers int32 `json:"workers"`
 }
 
-// PodFleetStatus defines the observed state of PodFleet
+// PerFleetStatus defines the observed state of PerFleet
 // +k8s:openapi-gen=true
-type PodFleetStatus struct {
+type PerFleetStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "operator-sdk generate k8s" to regenerate code after modifying this file
 	// Add custom validation using kubebuilder tags: https://book.kubebuilder.io/beyond_basics/generating_crd.html
@@ -31,26 +31,26 @@ type PodFleetStatus struct {
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// PodFleet is the Schema for the podfleets API
+// PerFleet is the Schema for the perfleets API
 // +k8s:openapi-gen=true
 // +kubebuilder:subresource:status
-type PodFleet struct {
+type PerFleet struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   PodFleetSpec   `json:"spec,omitempty"`
-	Status PodFleetStatus `json:"status,omitempty"`
+	Spec   PerFleetSpec   `json:"spec,omitempty"`
+	Status PerFleetStatus `json:"status,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// PodFleetList contains a list of PodFleet
-type PodFleetList struct {
+// PerFleetList contains a list of PerFleet
+type PerFleetList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata,omitempty"`
-	Items           []PodFleet `json:"items"`
+	Items           []PerFleet `json:"items"`
 }
 
 func init() {
-	SchemeBuilder.Register(&PodFleet{}, &PodFleetList{})
+	SchemeBuilder.Register(&PerFleet{}, &PerFleetList{})
 }

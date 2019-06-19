@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: podfleet-operator
+  name: perfleet-operator
 spec:
   replicas: 1
   selector:
     matchLabels:
-      name: podfleet-operator
+      name: perfleet-operator
   template:
     metadata:
       labels:
-        name: podfleet-operator
+        name: perfleet-operator
     spec:
-      serviceAccountName: podfleet-operator
+      serviceAccountName: perfleet-operator
       containers:
-        - name: podfleet-operator
+        - name: perfleet-operator
           # Replace this with the built image name
           image: REPLACE_IMAGE
           command:
-          - podfleet-operator
+          - perfleet-operator
           imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
@@ -30,4 +30,4 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: OPERATOR_NAME
-              value: "podfleet-operator"
+              value: "perfleet-operator"
